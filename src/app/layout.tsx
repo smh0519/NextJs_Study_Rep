@@ -36,12 +36,14 @@ export default function RootLayout({
             gap: '15px'
           }}>
             <Link href="/" style={{ fontWeight: 'bold' }}>🏠 홈</Link>
-            <Link href="/about" style={{ fontWeight: 'bold' }}>📄 About</Link>
+            <Link href="/about" style={{ fontWeight: 'bold' }} >📄 About</Link>
             <Link href="/products" style={{ fontWeight: 'bold' }}>🛒 상품목록</Link>
             <Link href="/products/1" style={{ fontWeight: 'bold' }}>🛒 상품1</Link>
             <Link href="/products/2" style={{ fontWeight: 'bold' }}>🛒 상품2</Link>
             <Link href="/dashboard" style={{ fontWeight: 'bold' }}>📊 대시보드</Link>
             <Link href="/learn" style={{ fontWeight: 'bold', color: '#9c27b0' }}>🎓 서버vs클라이언트</Link>
+            <Link href="/render-test" style={{ fontWeight: 'bold', color: '#ff5722' }}>🎨 렌더링비교</Link>
+            <Link href="/profile" style={{ fontWeight: 'bold', color: '#2196f3' }}>👤 프로필</Link>
           </nav>
 
           {/* ⭐ 여기가 바로 children이 들어오는 곳! */}

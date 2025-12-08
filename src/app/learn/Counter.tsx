@@ -1,13 +1,28 @@
 "use client"
-// ✅ 클라이언트 컴포넌트! ("use client" 있음)
+//  - 클라이언트 컴포넌트! ("use client" 있음)
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Counter() {
     console.log("🌐 브라우저에서 Counter 렌더링됨! (개발자도구 콘솔 확인!)");
 
-    // ✅ useState: 클라이언트 컴포넌트에서만 가능!
+    // useState: 클라이언트 컴포넌트에서만 가능!
     const [count, setCount] = useState(0);
+
+    // -컴포넌트 마운트 시 sessionStorage에서 저장된 값 불러오기
+    useEffect(() => {
+        const saved = sessionStorage.getItem("counter");
+        if (saved) {
+            setCount(Number(saved));
+        }
+    }, []);
+
+    //  count가 변경될 때마다 sessionStorage에 저장
+    useEffect(() => {
+        sessionStorage.setItem("counter", String(count));
+    }, [count]);
+
+
 
     return (
         <div style={{
@@ -31,7 +46,7 @@ export default function Counter() {
             </div>
 
             <div style={{ display: "flex", gap: "10px", justifyContent: "center" }}>
-                {/* ✅ onClick: 클라이언트 컴포넌트에서만 가능! */}
+                {/* onClick: 클라이언트 컴포넌트에서만 가능! */}
                 <button
                     onClick={() => setCount(count - 1)}
                     style={{
