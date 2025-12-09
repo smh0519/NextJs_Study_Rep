@@ -44,6 +44,8 @@ export default function RootLayout({
             <Link href="/learn" style={{ fontWeight: 'bold', color: '#9c27b0' }}>🎓 서버vs클라이언트</Link>
             <Link href="/render-test" style={{ fontWeight: 'bold', color: '#ff5722' }}>🎨 렌더링비교</Link>
             <Link href="/profile" style={{ fontWeight: 'bold', color: '#2196f3' }}>👤 프로필</Link>
+            <Link href="/loading-test" style={{ fontWeight: 'bold', color: '#5a6269ff' }}> 로딩테스트</Link>
+            <Link href="/loading-test?error=true" style={{ fontWeight: 'bold', color: '#f00000ff' }}> 에러테스트</Link>
           </nav>
 
           {/* ⭐ 여기가 바로 children이 들어오는 곳! */}
@@ -56,9 +58,6 @@ export default function RootLayout({
               ⬇️ 아래가 children 영역 (page.tsx 또는 하위 layout이 여기 들어옴)
             </p>
             {children}
-            <p style={{ color: 'gray', fontSize: '12px' }}>
-              ⬆️ children 영역 끝
-            </p>
           </div>
 
         </div>
