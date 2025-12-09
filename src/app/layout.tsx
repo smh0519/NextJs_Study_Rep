@@ -47,6 +47,7 @@ export default function RootLayout({
             <Link href="/loading-test" style={{ fontWeight: 'bold', color: '#5a6269ff' }}> 로딩테스트</Link>
             <Link href="/loading-test?error=true" style={{ fontWeight: 'bold', color: '#f00000ff' }}> 에러테스트</Link>
             <Link href="/parallel-test" style={{ fontWeight: 'bold', color: '#8b5cf6' }}>🔄 병렬라우트</Link>
+            <Link href="/gallery" style={{ fontWeight: 'bold', color: '#ec4899' }}>📸 갤러리</Link>
           </nav>
 
           {/* 여기가 바로 children이 들어오는 곳! */}
