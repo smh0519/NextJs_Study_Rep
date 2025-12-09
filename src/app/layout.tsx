@@ -46,9 +46,10 @@ export default function RootLayout({
             <Link href="/profile" style={{ fontWeight: 'bold', color: '#2196f3' }}>👤 프로필</Link>
             <Link href="/loading-test" style={{ fontWeight: 'bold', color: '#5a6269ff' }}> 로딩테스트</Link>
             <Link href="/loading-test?error=true" style={{ fontWeight: 'bold', color: '#f00000ff' }}> 에러테스트</Link>
+            <Link href="/parallel-test" style={{ fontWeight: 'bold', color: '#8b5cf6' }}>🔄 병렬라우트</Link>
           </nav>
 
-          {/* ⭐ 여기가 바로 children이 들어오는 곳! */}
+          {/* 여기가 바로 children이 들어오는 곳! */}
           <div style={{
             background: '#f5f5f5',
             padding: '20px',
